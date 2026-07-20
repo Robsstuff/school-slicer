@@ -82,13 +82,13 @@
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
-    <script src="/lib/kiri/run/frame.js"></script>
+    <script src="/school-slicer/lib/kiri/run/frame.js"></script>
     <script>
         let defc = [
             "let api = kiri.frame;",
             "api.setMode('FDM');",
             "api.clear();",
-            "api.load('/obj/cube.stl');",
+            "api.load('/school-slicer/obj/cube.stl');",
             "api.on('loaded', () => {",
             "    api.slice();",
             "});",
@@ -139,7 +139,7 @@
         </div>
         <div id="fcode">
             <div id="fhead">frame</div>
-            <iframe id="fbody" src="/kiri/"></iframe>
+            <iframe id="fbody" src="/school-slicer/kiri/"></iframe>
         </div>
     </div>
     <div id="api">

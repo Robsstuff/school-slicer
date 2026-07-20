@@ -3,12 +3,12 @@
     "short_name": "Kiri:Moto",
     "description": "Slicer for 3D printers, CNC mills, laser cutters and more",
     "start_url": "/boot/index.html",
-    "id": "/kiri/",
+    "id": "/school-slicer/kiri/",
     "display": "standalone",
     "theme_color": "#7e99b7",
     "background_color": "#ffffff",
     "orientation": "landscape-primary",
     "icons": [
-        { "src": "/icon/kirimoto.png", "type": "image/png", "sizes": "512x512" }
+        { "src": "/school-slicer/icon/kirimoto.png", "type": "image/png", "sizes": "512x512" }
     ]
 }

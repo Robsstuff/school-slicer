@@ -91,9 +91,9 @@
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
-    <!-- <script src="/lib/kiri-run/engine.js" type="module"></script> -->
+    <!-- <script src="/school-slicer/lib/kiri-run/engine.js" type="module"></script> -->
     <script type="module">
-        import { Engine } from '/lib/kiri/run/engine.js';
+        import { Engine } from '/school-slicer/lib/kiri/run/engine.js';
         let edit, saveit = "";
         function $(id) { return document.getElementById(id) }
         function onload() {
@@ -138,7 +138,7 @@
         function demoFDM() {
             new Engine()
             .setListener(display_message)
-            .load("/obj/cube.stl")
+            .load("/school-slicer/obj/cube.stl")
             .then(eng => eng.setProcess({
                 // empty
             }))
@@ -155,7 +155,7 @@
         function demoCAM(){
             new Engine()
             .setListener(display_message)
-            .load("/obj/cube.stl")
+            .load("/school-slicer/obj/cube.stl")
             // should to call widget.setTopZ here ideally
             .then(eng => eng.setMode("CAM"))
             .then(eng => eng.setStock({
@@ -255,7 +255,7 @@
         function demoLASER(){
             new Engine()
             .setListener(display_message)
-            .load("/obj/cube.stl")
+            .load("/school-slicer/obj/cube.stl")
             // should to call widget.setTopZ here ideally
             .then(eng => eng.setMode("LASER"))
             .then(eng => eng.setStock({
