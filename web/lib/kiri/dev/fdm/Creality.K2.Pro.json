@@ -17,9 +17,15 @@
     "gcodeFeature": [],
     "gcodeTrack": [],
     "gcodeLayer": [],
+    "gcodeChange": [
+        "; select CFS bay {tool}",
+        "T{tool}"
+    ],
     "gcodePre": [
         "; Creality K2 Pro start sequence",
         "START_PRINT EXTRUDER_TEMP={temp} BED_TEMP={bed_temp}",
+        "; select filament from CFS bay {tool}",
+        "T{tool}",
         "G92 E0",
         "G1 F2400 E-0.5"
     ],
@@ -32,6 +38,24 @@
     "gcodeProc": "",
     "gcodeFExt": "gcode",
     "extruders": [
+        {
+            "extFilament": 1.75,
+            "extNozzle": 0.4,
+            "extOffsetX": 0,
+            "extOffsetY": 0
+        },
+        {
+            "extFilament": 1.75,
+            "extNozzle": 0.4,
+            "extOffsetX": 0,
+            "extOffsetY": 0
+        },
+        {
+            "extFilament": 1.75,
+            "extNozzle": 0.4,
+            "extOffsetX": 0,
+            "extOffsetY": 0
+        },
         {
             "extFilament": 1.75,
             "extNozzle": 0.4,
