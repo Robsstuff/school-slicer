@@ -15,7 +15,9 @@
         "M106 S{fan_speed}"
     ],
     "gcodeFeature": [],
-    "gcodeTrack": [],
+    "gcodeTrack": [
+        "M73 P{progress} R{remain_time}"
+    ],
     "gcodeLayer": [],
     "gcodeChange": [
         "; select CFS bay {tool}",
@@ -23,17 +25,24 @@
     ],
     "gcodePre": [
         "; Creality K2 Pro start sequence",
-        "START_PRINT EXTRUDER_TEMP={temp} BED_TEMP={bed_temp}",
+        "; estimated print time: {total_time} min",
+        "G28 ; home all axes",
+        "G90 ; absolute positioning",
+        "M140 S{bed_temp} ; start heating bed",
+        "M104 S{temp} ; start heating nozzle",
         "; select filament from CFS bay {tool}",
         "T{tool}",
+        "M190 S{bed_temp} ; wait for bed temp",
+        "M109 S{temp} ; wait for nozzle temp",
         "G92 E0",
         "G1 F2400 E-0.5"
     ],
     "gcodePost": [
-        "M106 S0",
-        "M106 P2 S0",
-        "M106 P1 S0",
-        "END_PRINT"
+        "M106 S0 ; fan off",
+        "M104 S0 ; nozzle off",
+        "M140 S0 ; bed off",
+        "G28 X0 ; home X axis",
+        "M84 ; disable motors"
     ],
     "gcodeProc": "",
     "gcodeFExt": "gcode",
